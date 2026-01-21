@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" />
+<html lang="it">
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/main.html" />
-    </main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tigra DriveX | Evoluzione Digitale</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c4ff00' stroke-width='3' stroke-linecap='square' stroke-linejoin='arcs'%3E%3Crect x='3' y='3' width='10' height='10'/%3E%3Cpath d='M11 11l10 10m0-10v10h-10'/%3E%3C/svg%3E">
 
-    <load src="./partials/footer.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
 
-    <script type="module" src="./main.js"></script>
-  </body>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <div class="holographic-bg"></div>
+
+  <load src="./partials/header.html" />
+
+  <main>
+    <load src="./partials/main.html" />
+  </main>
+
+  <load src="./partials/footer.html" />
+
+  <div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-popup__content">
+      <div class="cookie-popup__icon">
+        <i data-lucide="cookie"></i>
+      </div>
+      <p class="cookie-popup__text">
+        Questo sito utilizza i cookies per migliorare l'esperienza di navigazione di <strong>Tigra DriveX</strong>.
+        Proseguendo, accetti la nostra <a href="./cookies.html">Cookie Policy</a>.
+      </p>
+      <div class="cookie-popup__actions">
+        <button id="cookie-accept" class="btn btn--primary btn--sm">Accetta</button>
+        <button id="cookie-decline" class="btn btn--outline btn--sm">Rifiuta</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>

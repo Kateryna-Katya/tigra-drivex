@@ -1,19 +1,24 @@
-<header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+<header class="header" id="header">
+  <nav class="container nav">
+    <a href="./#home" class="logo">
+      TIGRA<span>DRIVEX</span>
+    </a>
+
+    <ul class="nav__menu">
+      <li><a href="./#home" class="nav__link">Home</a></li>
+      <li><a href="./#corsi" class="nav__link">Corsi</a></li>
+      <li><a href="./#innovazione" class="nav__link">Innovazione</a></li>
+      <li><a href="./#metodologia" class="nav__link">Metodologia</a></li>
+      <li><a href="./#blog" class="nav__link">Blog</a></li>
+    </ul>
+
+    <a href="./#contact" class="btn btn--primary">
+      Contattaci
+      <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </nav>
 </header>
