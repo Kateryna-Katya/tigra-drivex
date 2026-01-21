@@ -1,56 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/tigra-drivex/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/tigra-drivex/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/tigra-drivex/assets/styles-guStct1H.css">
-  </head>
-  <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tigra DriveX | Evoluzione Digitale</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c4ff00' stroke-width='3' stroke-linecap='square' stroke-linejoin='arcs'%3E%3Crect x='3' y='3' width='10' height='10'/%3E%3Cpath d='M11 11l10 10m0-10v10h-10'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script type="module" crossorigin src="/tigra-drivex/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/tigra-drivex/assets/styles-DqQyZ6ZH.css">
+</head>
+
+<body>
+  <div class="holographic-bg"></div>
+
+  <header class="header" id="header">
+  <nav class="container nav">
+    <a href="./#home" class="logo">
+      TIGRA<span>DRIVEX</span>
+    </a>
+
+    <ul class="nav__menu">
+      <li><a href="./#home" class="nav__link">Home</a></li>
+      <li><a href="./#corsi" class="nav__link">Corsi</a></li>
+      <li><a href="./#innovazione" class="nav__link">Innovazione</a></li>
+      <li><a href="./#metodologia" class="nav__link">Metodologia</a></li>
+      <li><a href="./#blog" class="nav__link">Blog</a></li>
+    </ul>
+
+    <a href="./#contact" class="btn btn--primary">
+      Contattaci
+      <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </nav>
 </header>
 
+  <main>
+    <section class="hero" id="home">
+    <div class="container hero__grid">
+        <div class="hero__content">
+            <div class="hero__badge">
+                <i data-lucide="zap"></i>
+                Tecnologia di nuova generazione
+            </div>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      
-    </main>
+            <h1 class="hero__title">
+                FORMA IL FUTURO <br>
+                <span class="highlight-text">SCRIVI IL CODICE.</span>
+            </h1>
 
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+            <p class="hero__text">
+                Tigra DriveX non è solo una scuola IT. È un acceleratore di carriera basato su infrastrutture digitali
+                avanzate. Costruisci le competenze che il mercato europeo richiede oggi.
+            </p>
+
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary">
+                    Inizia Ora
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#corsi" class="btn btn--outline">
+                    Esplora i corsi
+                </a>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div id="three-canvas-container" class="brutalist-frame"></div>
+        </div>
+    </div>
+</section>
+
+<section class="platform" id="corsi">
+    <div class="ticker">
+        <div class="ticker__wrapper">
+            <span>TECNOLOGIA DEL FUTURO • INNOVAZIONE DIGITALE • CARRIERA IT • TIGRA DRIVEX • </span>
+            <span>TECNOLOGIA DEL FUTURO • INNOVAZIONE DIGITALE • CARRIERA IT • TIGRA DRIVEX • </span>
+            <span>TECNOLOGIA DEL FUTURO • INNOVAZIONE DIGITALE • CARRIERA IT • TIGRA DRIVEX • </span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="platform__grid">
+            <div class="platform__info">
+                <h2 class="section-title">Oltre la semplice <br><span class="text-outline">formazione.</span></h2>
+                <p class="section-subtitle">
+                    Tigra DriveX è un'infrastruttura digitale all'avanguardia progettata per trasformare studenti in
+                    professionisti pronti per il mercato dell'Unione Europea.
+                </p>
+            </div>
+
+            <div class="platform__cards">
+                <div class="p-card" data-aos="fade-up">
+                    <div class="p-card__icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3 class="p-card__title">Ecosistema Integrato</h3>
+                    <p class="p-card__text">Soluzioni che cambiano le regole del gioco grazie a strumenti AI integrati
+                        nel percorso di studio.</p>
+                </div>
+
+                <div class="p-card" data-aos="fade-up" data-offset="100">
+                    <div class="p-card__icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <h3 class="p-card__title">Tecnologia Next-Gen</h3>
+                    <p class="p-card__text">Utilizziamo una piattaforma dell'anno per garantire un'esperienza di
+                        apprendimento fluida e scalabile.</p>
+                </div>
+
+                <div class="p-card" data-aos="fade-up" data-offset="200">
+                    <div class="p-card__icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h3 class="p-card__title">Standard Europei</h3>
+                    <p class="p-card__text">La piattaforma è già disponibile in Europa, con certificazioni riconosciute
+                        dai leader del settore IT.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="benefits" id="innovazione">
+    <div class="container">
+        <div class="benefits__header">
+            <h2 class="section-title">Vantaggi <span class="highlight-text">Esclusivi</span></h2>
+            <p class="section-subtitle">Perché migliaia di studenti scelgono il nostro ecosistema ogni giorno.</p>
+        </div>
+
+        <div class="benefits__grid">
+            <div class="benefit-item" data-aos="zoom-in-right">
+                <span class="benefit-item__num">01</span>
+                <div class="benefit-item__content">
+                    <h3 class="benefit-item__title">Start Rapido</h3>
+                    <p class="benefit-item__text">L'attivazione del tuo profilo richiede meno di 2 minuti. Inizia a
+                        costruire la tua carriera che lavora per te oggi stesso.</p>
+                    <div class="benefit-item__sticker">FAST</div>
+                </div>
+            </div>
+
+            <div class="benefit-item benefit-item--alt" data-aos="zoom-in-left">
+                <span class="benefit-item__num">02</span>
+                <div class="benefit-item__content">
+                    <h3 class="benefit-item__title">Supporto Esperto</h3>
+                    <p class="benefit-item__text">Ricevi assistenza dedicata in ogni fase del percorso. I nostri mentor
+                        sono partner verificati nel settore IT europeo.</p>
+                    <i data-lucide="help-circle" class="benefit-item__icon"></i>
+                </div>
+            </div>
+
+            <div class="benefit-item" data-aos="zoom-in-right">
+                <span class="benefit-item__num">03</span>
+                <div class="benefit-item__content">
+                    <h3 class="benefit-item__title">Strategia di Crescita</h3>
+                    <p class="benefit-item__text">Non solo codice, ma una vera strategia basata su innovazioni per
+                        generare valore e scalare i tuoi progetti.</p>
+                    <div class="benefit-item__tag">#GROWTH</div>
+                </div>
+            </div>
+
+            <div class="benefit-item benefit-item--alt" data-aos="zoom-in-left">
+                <span class="benefit-item__num">04</span>
+                <div class="benefit-item__content">
+                    <h3 class="benefit-item__title">Accesso UE</h3>
+                    <p class="benefit-item__text">Offerta attiva esclusivamente nei paesi UE. La nostra piattaforma è
+                        ottimizzata per gli standard di sicurezza europei.</p>
+                    <i data-lucide="shield-check" class="benefit-item__icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="innovation" id="metodologia">
+    <div class="container innovation__grid">
+
+        <div class="innovation__content" data-aos="fade-right">
+            <div class="hero__badge">
+                <i data-lucide="cpu"></i>
+                AI-Tools Integrati
+            </div>
+            <h2 class="section-title">Tecnologia che <span class="highlight-text">lavora per te.</span></h2>
+            <p class="section-subtitle">
+                Non solo teoria. La nostra metodologia integra strumenti AI avanzati per risolvere compiti reali.
+                Automatizza la routine e concentrati sulla strategia.
+            </p>
+
+            <ul class="tech-list">
+                <li class="tech-item">
+                    <i data-lucide="workflow" class="tech-item__icon"></i>
+                    <div>
+                        <h4 class="tech-item__title">Automazione Intelligente</h4>
+                        <p class="tech-item__text">Riduci il lavoro manuale del 70% con flussi di lavoro predittivi.</p>
+                    </div>
+                </li>
+                <li class="tech-item">
+                    <i data-lucide="terminal-square" class="tech-item__icon"></i>
+                    <div>
+                        <h4 class="tech-item__title">Deployment Istantaneo</h4>
+                        <p class="tech-item__text">Dal codice locale all'infrastruttura cloud europea in un click.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="innovation__visual" data-aos="fade-left" data-aos-delay="200">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="terminal-title">drivex-ai ~ protocollo_avvio.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <span id="typeit-terminal"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="blog__header">
+            <h2 class="section-title">Insights & <span class="text-outline">Risorse</span></h2>
+            <p class="section-subtitle">Esplora le prospettive del progetto e rimani aggiornato sulle tecnologie che
+                cambiano le regole del gioco.</p>
+        </div>
+
+        <div class="swiper blog-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="img/placeholder.png" alt="AI Development">
+                            <span class="blog-card__tag">Innovazione</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">AI-Tools per compiti reali</h3>
+                            <p class="blog-card__text">Scopri come integrare le tecnologie di nuova generazione nel tuo
+                                workflow quotidiano per raddoppiare la produttività.</p>
+                            <a href="#" class="blog-card__link">Leggi di più <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="img/placeholder.png" alt="IT Career">
+                            <span class="blog-card__tag">Carriera</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Costruire una carriera UE</h3>
+                            <p class="blog-card__text">Le metodologie che hanno dimostrato efficacia nel mercato
+                                europeo. Una guida passo dopo passo, comprensibile a tutti.</p>
+                            <a href="#" class="blog-card__link">Leggi di più <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <article class="blog-card">
+                        <div class="blog-card__image">
+                            <img src="img/placeholder.png" alt="Digital Infrastructure">
+                            <span class="blog-card__tag">Tech</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <h3 class="blog-card__title">Infrastruttura Digitale 2026</h3>
+                            <p class="blog-card__text">Perché la piattaforma dell'anno si basa su soluzioni
+                                decentralizzate e come questo influisce sullo sviluppo futuro.</p>
+                            <a href="#" class="blog-card__link">Leggi di più <i data-lucide="chevron-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+
+            <div class="contact__info" data-aos="fade-right">
+                <h2 class="section-title">Pronto a fare <br><span class="highlight-text">il salto?</span></h2>
+                <p class="section-subtitle">Ottieni una consulenza gratuita su tutti i nostri programmi e scopri come
+                    accedere alla piattaforma.</p>
+
+                <div class="contact__badge">
+                    <i data-lucide="check-circle"></i>
+                    <span>Risposta garantita entro 24 ore</span>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper" data-aos="fade-left">
+                <form id="drivex-form" class="c-form">
+                    <div class="c-form__group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" name="name" placeholder="Mario Rossi" required>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="email">E-mail aziendale o personale</label>
+                        <input type="email" id="email" name="email" placeholder="mario@esempio.it" required>
+                    </div>
+
+                    <div class="c-form__group">
+                        <label for="phone">Telefono (Solo cifre)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="3921234567" required>
+                        <small class="error-msg" id="phone-error">Inserisci solo numeri.</small>
+                    </div>
+
+                    <div class="c-form__group c-form__group--captcha">
+                        <label for="captcha">Risolvi: <span id="captcha-question">5 + 3</span> = ?</label>
+                        <input type="text" id="captcha-answer" placeholder="Risultato" required>
+                    </div>
+
+                    <div class="c-form__checkbox">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">Accetto la <a href="privacy.html">Privacy Policy</a> e il trattamento dei
+                            dati.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">
+                        Invia Richiesta
+                        <i data-lucide="send"></i>
+                    </button>
+
+                    <div id="form-success" class="form-status success">
+                        <i data-lucide="party-popper"></i>
+                        <span>Richiesta inviata con successo! Ti contatteremo a breve.</span>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+  </main>
+
+  <footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="./#home" class="logo logo--footer">TIGRA<span>DRIVEX</span></a>
+      <p class="footer__text">Tecnologie di nuova generazione per i leader del domani. Costruisci la tua carriera nel
+        mercato UE.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Navigazione</h4>
+      <ul class="footer__links">
+        <li><a href="./#home">Home</a></li>
+        <li><a href="./#corsi">Corsi</a></li>
+        <li><a href="./#innovazione">Innovazione</a></li>
+        <li><a href="./#metodologia">Metodologia</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Legale</h4>
+      <ul class="footer__links">
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./cookies.html">Cookie Policy</a></li>
+        <li><a href="./terms.html">Termini di Utilizzo</a></li>
+        <li><a href="./return.html">Politica di Rimborso</a></li>
+        <li><a href="./disclaimer.html">Esclusione di Responsabilità</a></li>
+        <li><a href="./personal-data-policy.html">Trattamento Dati Personali</a></li>
+        <li><a href="./contact.html">Pagina Contatti</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Contatti</h4>
+      <ul class="footer__contact">
+        <li>
+          <i data-lucide="phone"></i>
+          <span>+39 02 87364827</span>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <span>support@tigra-drivex.life</span>
+        </li>
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>Via della Moscova, 18, 20121 Milano (MI), Italia</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Tigra DriveX. Tutti i diritti riservati.</p>
   </div>
 </footer>
 
+  <div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-popup__content">
+      <div class="cookie-popup__icon">
+        <i data-lucide="cookie"></i>
+      </div>
+      <p class="cookie-popup__text">
+        Questo sito utilizza i cookies per migliorare l'esperienza di navigazione di <strong>Tigra DriveX</strong>.
+        Proseguendo, accetti la nostra <a href="./cookies.html">Cookie Policy</a>.
+      </p>
+      <div class="cookie-popup__actions">
+        <button id="cookie-accept" class="btn btn--primary btn--sm">Accetta</button>
+        <button id="cookie-decline" class="btn btn--outline btn--sm">Rifiuta</button>
+      </div>
+    </div>
+  </div>
 
-  </body>
+</body>
+
 </html>

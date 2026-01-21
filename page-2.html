@@ -5,29 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
-    <link rel="stylesheet" crossorigin href="/tigra-drivex/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/tigra-drivex/assets/styles-DqQyZ6ZH.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <header class="header" id="header">
+  <nav class="container nav">
+    <a href="./#home" class="logo">
+      TIGRA<span>DRIVEX</span>
+    </a>
 
+    <ul class="nav__menu">
+      <li><a href="./#home" class="nav__link">Home</a></li>
+      <li><a href="./#corsi" class="nav__link">Corsi</a></li>
+      <li><a href="./#innovazione" class="nav__link">Innovazione</a></li>
+      <li><a href="./#metodologia" class="nav__link">Metodologia</a></li>
+      <li><a href="./#blog" class="nav__link">Blog</a></li>
+    </ul>
+
+    <a href="./#contact" class="btn btn--primary">
+      Contattaci
+      <i data-lucide="arrow-up-right"></i>
+    </a>
+
+    <button class="nav__toggle" aria-label="Toggle menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </nav>
+</header>
 
     <main>
       <div class="container">
@@ -38,20 +42,58 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+    <div class="footer__col">
+      <a href="./#home" class="logo logo--footer">TIGRA<span>DRIVEX</span></a>
+      <p class="footer__text">Tecnologie di nuova generazione per i leader del domani. Costruisci la tua carriera nel
+        mercato UE.</p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Navigazione</h4>
+      <ul class="footer__links">
+        <li><a href="./#home">Home</a></li>
+        <li><a href="./#corsi">Corsi</a></li>
+        <li><a href="./#innovazione">Innovazione</a></li>
+        <li><a href="./#metodologia">Metodologia</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Legale</h4>
+      <ul class="footer__links">
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./cookies.html">Cookie Policy</a></li>
+        <li><a href="./terms.html">Termini di Utilizzo</a></li>
+        <li><a href="./return.html">Politica di Rimborso</a></li>
+        <li><a href="./disclaimer.html">Esclusione di Responsabilità</a></li>
+        <li><a href="./personal-data-policy.html">Trattamento Dati Personali</a></li>
+        <li><a href="./contact.html">Pagina Contatti</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Contatti</h4>
+      <ul class="footer__contact">
+        <li>
+          <i data-lucide="phone"></i>
+          <span>+39 02 87364827</span>
+        </li>
+        <li>
+          <i data-lucide="mail"></i>
+          <span>support@tigra-drivex.life</span>
+        </li>
+        <li>
+          <i data-lucide="map-pin"></i>
+          <span>Via della Moscova, 18, 20121 Milano (MI), Italia</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Tigra DriveX. Tutti i diritti riservati.</p>
   </div>
 </footer>
-
   </body>
 </html>
